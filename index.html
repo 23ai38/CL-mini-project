@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game">
+    <section class="hero">
+      <p class="eyebrow">Classic Hand Game</p>
+      <h1>Rock Paper Scissors</h1>
+      <p class="subtitle">
+        Pick your move, challenge the computer, and see who reaches victory first.
+      </p>
+    </section>
+
+    <section class="scoreboard" aria-label="Scoreboard">
+      <article class="score-card">
+        <span class="score-label">You</span>
+        <strong id="player-score">0</strong>
+      </article>
+      <article class="score-card">
+        <span class="score-label">Computer</span>
+        <strong id="computer-score">0</strong>
+      </article>
+    </section>
+
+    <section class="controls" aria-label="Choose your move">
+      <button class="choice" data-choice="rock" aria-label="Choose rock">
+        <span class="token">R</span>
+        <span>Rock</span>
+      </button>
+      <button class="choice" data-choice="paper" aria-label="Choose paper">
+        <span class="token">P</span>
+        <span>Paper</span>
+      </button>
+      <button class="choice" data-choice="scissors" aria-label="Choose scissors">
+        <span class="token">S</span>
+        <span>Scissors</span>
+      </button>
+    </section>
+
+    <section class="arena" aria-live="polite">
+      <div class="pick-card">
+        <span class="pick-label">Your pick</span>
+        <strong id="player-pick">-</strong>
+      </div>
+      <div class="pick-card">
+        <span class="pick-label">Computer pick</span>
+        <strong id="computer-pick">-</strong>
+      </div>
+    </section>
+
+    <section class="status-panel">
+      <p id="result-message">Make your move to start the match.</p>
+      <p class="fairness-note">Each round is decided by an equal random computer pick.</p>
+      <button id="reset-button" class="reset">Reset Game</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
